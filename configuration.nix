@@ -129,6 +129,7 @@
     wget
     git
     moonlight-qt
+    vscode-fhs
   ];
   
   # Enable fingerprint scanner
