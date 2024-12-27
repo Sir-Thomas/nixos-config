@@ -52,8 +52,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      variant = "";
+      layout = "us";
+    };
   };
 
   # Remap CAPS to ESC/CTRL
