@@ -129,14 +129,10 @@
     wget
     git
     moonlight-qt
-    direnv
   ];
   
   # Enable fingerprint scanner
   services.fprintd.enable = true;
-
-  # Enable direnv
-  programs.bash.interactiveShellInit = ''eval "$(direnv hook bash)"'';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
