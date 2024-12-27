@@ -4,8 +4,10 @@
     # configuration.nix. You can also use latter versions if you wish to
     # upgrade.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = inputs@{ self, nixpkgs, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
     # NOTE: 'nixos' is the default hostname set by the installer
     nixosConfigurations.tommy-laptop = nixpkgs.lib.nixosSystem {
       # NOTE: Change this to aarch64-linux if you are on ARM
@@ -16,6 +18,12 @@
 	  nix = {
 	    settings.experimental-features = [ "nix-command" "flakes" ];
 	  };
+	}
+	home-manager.nixosModules.home-manager
+	{
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+	  home-manager.users.tommy = import ./home.nix;
 	}
       ];
     };
