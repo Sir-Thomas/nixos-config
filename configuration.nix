@@ -109,7 +109,7 @@
   users.users.tommy = {
     isNormalUser = true;
     description = "tommy";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -130,6 +130,8 @@
     git
     moonlight-qt
     vscode-fhs
+    screen
+    cockatrice
   ];
   
   # Enable fingerprint scanner
