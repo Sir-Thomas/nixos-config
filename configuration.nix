@@ -137,6 +137,11 @@
   # Enable fingerprint scanner
   services.fprintd.enable = true;
 
+  # Set udev rules for micro bit
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", MODE="0666"
+  '';
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
