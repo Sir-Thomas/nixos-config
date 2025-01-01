@@ -132,6 +132,7 @@
     vscode-fhs
     screen
     cockatrice
+    discord
   ];
   
   # Enable fingerprint scanner
