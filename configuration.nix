@@ -133,6 +133,7 @@
     screen
     cockatrice
     discord
+    orca-slicer
   ];
   
   # Enable fingerprint scanner
