@@ -137,6 +137,8 @@
     screen
     cockatrice
     discord
+    qemu
+    virt-manager
   ];
 
   # Enable fingerprint scanner
