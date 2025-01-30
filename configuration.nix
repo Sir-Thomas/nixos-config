@@ -137,9 +137,13 @@
     screen
     cockatrice
     discord
-    qemu
-    virt-manager
   ];
+
+  # Enable Virtualization
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["tommy"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   # Enable fingerprint scanner
   services.fprintd.enable = true;
