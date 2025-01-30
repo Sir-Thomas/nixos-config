@@ -137,12 +137,8 @@
     screen
     cockatrice
     discord
-    vmware-workstation
-    vmware-horizon-client
   ];
 
-  virtualisation.vmware.host.enable = true;
-  
   # Enable fingerprint scanner
   services.fprintd.enable = true;
 
